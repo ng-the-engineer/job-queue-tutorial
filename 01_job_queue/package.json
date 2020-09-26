@@ -1,0 +1,23 @@
+{
+  "name": "01_job_queue",
+  "version": "1.0.0",
+  "description": "An example job queue with retry",
+  "main": "app.js",
+  "author": "Anthony Ng",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "babel -d lib/ src/",
+    "start": "rm -rf lib/ && babel -d lib/ src/ && node lib/app.js --unhandled-rejections=strict"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5"
+  },
+  "dependencies": {
+    "bee-queue": "^1.2.3",
+    "gaussian": "^1.1.0"
+  }
+}
